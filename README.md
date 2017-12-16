@@ -1,8 +1,6 @@
 # Onionurigen
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/onionurigen`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Onionurigen is a gem for creating .onion addresses considering a given patern.
 
 ## Installation
 
@@ -22,7 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+###Single Threading Usage
+
+```ruby
+# pattern obj should be a string or a Regexp
+Onionurigen.find(pattern)
+```
+
+###Multi-Threading Usage
+
+In MultiThreading mode you should use workers to execute the direct method of the gem.
+Each worker should run:
+````ruby
+Onionurigen::AddressFinder.new(pattern, true)
+````
+
+Once the hash has been found, the method .found? will be set to true, and the methods .onion_uri and .private_key will 
+be available to this instance object.
+
 
 ## Development
 
@@ -32,7 +47,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/onionurigen. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hamdan85/onionurigen. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
