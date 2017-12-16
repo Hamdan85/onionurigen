@@ -7,4 +7,3 @@ gemspec
 
 gem 'base32'
 gem 'openssl_pkcs8_pure'
-gem 'awesome_print'
