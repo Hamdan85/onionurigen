@@ -26,6 +26,7 @@ module Onionurigen
         @spki = Onionurigen::SPKI.new(@rsa)
         break if @spki.encoded =~ @match
       end
+      @found = true
       @private_key = @rsa.private_key.to_pem_pkcs8
       @onion_url = "http://#{@spki.encoded.downcase}.onion"
     end

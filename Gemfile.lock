@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    onionurigen (0.1.6)
+    onionurigen (0.1.7)
       base32 (~> 0)
       openssl_pkcs8_pure (~> 0)
 
