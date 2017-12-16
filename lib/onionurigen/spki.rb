@@ -1,6 +1,5 @@
 require 'openssl'
 require 'securerandom'
-require 'base32'
 
 module Onionurigen
   class SPKI

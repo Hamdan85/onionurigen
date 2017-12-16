@@ -11,3 +11,5 @@
 .rspec_status
 /.idea/workspace.xml
 /.idea/onionurigen.iml
+/.idea/.rakeTasks
+/.idea/**
